@@ -1,16 +1,15 @@
-# TODO
+# latest versions as of 2024-11-05
 [versions]
-flyway-version = "10.17.0"
-postgresql-version = "42.7.3"
-slf4j-version = "2.0.11"
-log4j-version = "2.22.1"
-junit-version = "5.9.2"
-mockito-version = "5.8.0"
-assertj-version = "3.25.1"
+flyway-version = "10.20.1"
+postgresql-version = "42.7.4"
+slf4j-version = "2.0.16"
+log4j-version = "2.24.1"
+junit-version = "5.11.3"
+mockito-version = "5.14.2"
+assertj-version = "3.26.3"
 spring-boot-version = "3.3.5"
 spring-dependency-management-version = "1.1.6"
 
-# TODO
 [libraries]
 postgresql-driver = { module = "org.postgresql:postgresql", version.ref = "postgresql-version" }
 flyway-postgres = { module = "org.flywaydb:flyway-database-postgresql", version.ref = "flyway-version" }

@@ -9,6 +9,7 @@ plugins {
     id 'java'
     id 'application'
     alias libs.plugins.flyway.plugin
+    alias libs.plugins.spring.dependency.management.plugin
 }
 
 application {
