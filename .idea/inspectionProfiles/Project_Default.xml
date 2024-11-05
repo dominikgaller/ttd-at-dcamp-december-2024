@@ -4,7 +4,11 @@
     <inspection_tool class="NewClassNamingConvention" enabled="true" level="WARNING" enabled_by_default="true">
       <extension name="AbstractClassNamingConvention" enabled="true" />
       <extension name="AnnotationNamingConvention" enabled="true" />
-      <extension name="ClassNamingConvention" enabled="true" />
+      <extension name="ClassNamingConvention" enabled="true">
+        <option name="m_regex" value="[A-Z][A-Za-z\d]*" />
+        <option name="m_minLength" value="3" />
+        <option name="m_maxLength" value="64" />
+      </extension>
       <extension name="EnumeratedClassNamingConvention" enabled="true" />
       <extension name="InterfaceNamingConvention" enabled="true" />
       <extension name="JUnitAbstractTestClassNamingConvention" enabled="true">

@@ -25,7 +25,7 @@ repositories {
 dependencies {
     // -- APPLICATION --
     implementation libs.postgresql.driver
-    implementation libs.spring.boot.web
+    implementation libs.bundles.springboot
     implementation libs.bundles.log4jslf4j
 
     runtimeOnly libs.flyway.postgres
