@@ -6,8 +6,8 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: genericspringdemo
-      POSTGRES_PASSWORD: genericspringdemo
-      POSTGRES_DB: genericspringdemo
+      POSTGRES_USER: generic-spring-demo
+      POSTGRES_PASSWORD: generic-spring-demo
+      POSTGRES_DB: generic-spring-demo
     volumes:
       - ./data:/var/lib/postgresql/data
