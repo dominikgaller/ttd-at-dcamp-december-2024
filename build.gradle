@@ -1,0 +1,61 @@
+buildscript {
+    dependencies {
+        classpath libs.postgresql.driver
+        classpath libs.flyway.postgres
+    }
+}
+
+plugins {
+    id 'java'
+    id 'application'
+    alias libs.plugins.flyway.plugin
+}
+
+application {
+    group = 'com.esentri'
+    version = '1.0'
+    mainClass = '$java_base_package.Application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // -- APPLICATION --
+    implementation libs.postgresql.driver
+    implementation libs.spring.boot.web
+    implementation libs.bundles.log4jslf4j
+
+    runtimeOnly libs.flyway.postgres
+
+    // -- TESTS --
+    testImplementation libs.bundles.tests
+    testRuntimeOnly libs.junit.platform.launcher
+}
+
+test {
+    useJUnitPlatform()
+}
+
+flyway {
+    driver = db_driver
+    url = db_url
+    user = db_user
+    password = db_password
+    locations = [flyway_migration_location_1]
+}
+
+tasks.named("flywayMigrate") {
+    dependsOn(tasks.named("classes"))
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes 'Main-Class': '$java_base_package.Application'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
