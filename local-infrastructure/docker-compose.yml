@@ -1,0 +1,13 @@
+# docker-compose.yml
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: genericspringdemo
+      POSTGRES_PASSWORD: genericspringdemo
+      POSTGRES_DB: genericspringdemo
+    volumes:
+      - ./data:/var/lib/postgresql/data
