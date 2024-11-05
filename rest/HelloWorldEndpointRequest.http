@@ -1,0 +1,3 @@
+### Request to Hello World endpoint
+GET http://localhost:8080/api/hello
+Accept: text/plain
