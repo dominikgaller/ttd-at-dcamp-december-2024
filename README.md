@@ -1,7 +1,22 @@
 # TDD Demo
 
-This project contains a simple demo to explain the core concepts of Test Driven Development (TDD). The core concepts
-are 
+
+This project provides a basic FizzBuzz demonstration to illustrate the core principles of Test-Driven Development (TDD).
+While experienced developers may find TDD unnecessary for such a trivial problem,
+opting instead for a straightforward implementation after defining test cases, the example remains valuable.
+
+TDD is most effective when addressing complex business logic or intricate algorithms.
+
+FizzBuzz, while simple, serves as an effective pedagogical tool, allowing for focused attention on TDD methodology.
+This methodology is crucial for robust software engineering,
+even if it initially appears to separate the creative exploration phase from the formal engineering process.
+
+Before proceeding, it is important to remember Edsger W. Dijkstra's words regarding software testing:
+
+> “Program testing can be used to show the presence of bugs, but never to show their absence!” 
+> </br> ― Edsger W. Dijkstra
+
+The core concepts are 
 
 1. **Production Code Driven by Tests**  
 You should only write production code in direct response to a failing test. No production code should exist without a 
@@ -61,8 +76,7 @@ flowchart TD
 # Disclaimer
 
 This repository contains a sample file and a sample test for the FizzBuzz problem. Despite being publicly available,
-this repository is not licensed for use, modification, or distribution beyond the scope of personal reference and
-educational purposes.
+this repository is not licensed.
 
 ## Important Notes:
 
