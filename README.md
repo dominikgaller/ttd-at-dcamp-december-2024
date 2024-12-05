@@ -20,7 +20,7 @@ The core concepts are
 
 1. **Production Code Driven by Tests**  
 You should only write production code in direct response to a failing test. No production code should exist without a 
-corresponding test-driving its necessity.
+corresponding test, driving its necessity.
 
 2. **Minimalist Production Code**  
 When implementing production code, write only the code required to make the failing test pass. 
