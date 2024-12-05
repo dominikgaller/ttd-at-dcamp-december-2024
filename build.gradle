@@ -1,19 +1,10 @@
-buildscript {
-    dependencies {
-        classpath libs.postgresql.driver
-        classpath libs.flyway.postgres
-    }
-}
-
 plugins {
     id 'java'
     id 'application'
-    alias libs.plugins.flyway.plugin
-    alias libs.plugins.spring.dependency.management.plugin
 }
 
 application {
-    group = 'com.esentri'
+    group = 'com.dominikgaller'
     version = '1.0'
     mainClass = '$java_base_package.Application'
 }
@@ -24,11 +15,7 @@ repositories {
 
 dependencies {
     // -- APPLICATION --
-    implementation libs.postgresql.driver
-    implementation libs.bundles.springboot
     implementation libs.bundles.log4jslf4j
-
-    runtimeOnly libs.flyway.postgres
 
     // -- TESTS --
     testImplementation libs.bundles.tests
@@ -37,18 +24,6 @@ dependencies {
 
 test {
     useJUnitPlatform()
-}
-
-flyway {
-    driver = db_driver
-    url = db_url
-    user = db_user
-    password = db_password
-    locations = [flyway_migration_location_1]
-}
-
-tasks.named("flywayMigrate") {
-    dependsOn(tasks.named("classes"))
 }
 
 jar {

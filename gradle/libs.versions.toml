@@ -1,37 +1,20 @@
 # latest versions as of 2024-11-05
 [versions]
-flyway-version = "10.20.1"
-postgresql-version = "42.7.4"
 slf4j-version = "2.0.16"
 log4j-version = "2.24.1"
 junit-version = "5.11.3"
 mockito-version = "5.14.2"
 assertj-version = "3.26.3"
-spring-boot-version = "3.3.5"
-spring-dependency-management-version = "1.1.6"
 
 [libraries]
-postgresql-driver = { module = "org.postgresql:postgresql", version.ref = "postgresql-version" }
-flyway-postgres = { module = "org.flywaydb:flyway-database-postgresql", version.ref = "flyway-version" }
 slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j-version" }
 log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "log4j-version" }
 log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "log4j-version" }
-# log4j-slf4j2impl = { module = "org.apache.logging.log4j:log4j-slf4j2-impl", version.ref = "log4j-version" }
 junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-version" }
 mockito = { module = "org.mockito:mockito-core", version.ref = "mockito-version" }
 assertj = { module = "org.assertj:assertj-core", version.ref = "assertj-version" }
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
-spring-boot-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "spring-boot-version" }
-spring-boot-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa", version.ref = "spring-boot-version" }
-spring-boot-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring-boot-version" }
-spring-boot-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "spring-boot-version"}
 
 [bundles]
-#log4jslf4j = ['slf4j-api', 'log4j-api', 'log4j-core', 'log4j-slf4j2impl']
-springboot = ['spring-boot-data-jpa','spring-boot-web', 'spring-boot-actuator']
 log4jslf4j = ['slf4j-api', 'log4j-api', 'log4j-core']
-tests = ['junit', 'mockito', 'assertj', 'spring-boot-test']
-
-[plugins]
-flyway-plugin = { id = "org.flywaydb.flyway", version.ref = "flyway-version" }
-spring-dependency-management-plugin = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management-version" }
+tests = ['junit', 'mockito', 'assertj']

@@ -5,7 +5,6 @@ build/
 !src/test/**/build/
 
 ### Project ###
-/local-infrastructure/data/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
